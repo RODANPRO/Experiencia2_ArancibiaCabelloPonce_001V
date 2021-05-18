@@ -9,7 +9,8 @@ body {
 } 
 
 div {
-    background-color:white;
+    color:oscuro(This);
+    background-color: oscuro(This);
   }
 
 .color{
@@ -24,7 +25,6 @@ div {
     background-color:  #006699;
     color: azure;
     width: 100%;
-    padding-top: 400px;
 }
 
 #galeria img{
@@ -44,6 +44,8 @@ div {
 
 .navbar{
     position: fixed;
+    background-color:oscuro(This);
+    border-color: oscuro(This);
 }
 
 
@@ -184,4 +186,9 @@ form .button input {
   border-radius: 5px;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
   padding: 5px;
+}
+
+.oscuro{ 
+  background-color: #1f1f1f; 
+  color: #f1eded;
 }

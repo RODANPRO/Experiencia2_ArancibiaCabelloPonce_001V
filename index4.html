@@ -11,6 +11,14 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC"></script>
     <script>
+
+    function CambiarModo(a)
+    {
+      var cuerpoweb = document.body;
+      cuerpoweb.classList.toggle("oscuro");
+    }
+
+
       $(function() 
       {
         $("#registro").validate({
@@ -172,9 +180,11 @@
                         <label for="fono">Número de teléfono</label>
                         <input type="tel" id="fono" name="fono" required placeholder="+569XXXXXXXX" maxlength="12"><br>
                       </div>
+                      <div>
+                       <button type="button" class="btn btn-dark" onclick="CambiarModo(this)"> Modo Oscuro</button>
+                      </div>
                       <div class="input-box">
-                        <label for="opcion">¿Deseas ser voluntario o necesitas ayuda?</label><br>
-                      
+                        <label for="opcion">¿Deseas ser voluntario o necesitas ayuda?</label><br>               
                         <select id="opcion" name="opcion">
                             <option value="voluntario">Quiero ser voluntario</option>
                             <option value="ayuda">Necesito ayuda</option>                    
@@ -197,6 +207,14 @@
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
-    
+  
+      
+      <script type="text/javascript"> 
+        function cambiarModo() { 
+          var cuerpoweb = document.body; 
+          cuerpoweb.classList.toggle("oscuro");
+           
+        } 
+      </script>      
 </body>
 </html>
