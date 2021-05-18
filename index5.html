@@ -16,6 +16,24 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC"></script>
+
+    <script>
+
+        function Mover(obj)
+        {
+            obj.innerHTML="Gracias por ayudar";
+            obj.style.background="green";
+        }
+
+        function MoverFuera(obj)
+        {
+            obj.innerHTML="Pasa por aquí";
+            obj.style.background="yellow";
+        }
+
+    </script>
+
+
 </head>
 
 <body>
@@ -26,7 +44,7 @@
 
         <!-- logo -->
         <a class="navbar-brand" href="#">
-            <img src="img/loguito.jpg">
+            <img src="img/loguito.png" height="60" width="105">
         </a>
         <!-- enlaces -->
         <div class="collapse navbar-collapse" id="opciones">
@@ -104,9 +122,14 @@
                             <input type="text" id="descripcion" name="descripcion"><br>
                         </div>
 
+                        <div onmouseover="Mover(this)" onmouseout="MoverFuera(this)"
+                            style="background-color: red; width: 200px; height: 30px; padding: 25px;">
+                            ¡Hola!</div>
+
                         <div class="button">
                             <input type="submit" value="Ingresar producto"><br>
                         </div>
+
                     </div>
                 </form>
             </div>
