@@ -13,25 +13,48 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4c2cfb7421.js" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-        integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <script>
 
-        function Mover(obj)
-        {
-            obj.innerHTML="Gracias por ayudar";
-            obj.style.background="green";
+        function Mover(obj) {
+            obj.innerHTML = "Gracias por ayudar";
+            obj.style.background = "green";
         }
 
-        function MoverFuera(obj)
-        {
-            obj.innerHTML="Pasa por aquí";
-            obj.style.background="yellow";
+        function MoverFuera(obj) {
+            obj.innerHTML = "Pasa por aquí";
+            obj.style.background = "yellow";
         }
 
     </script>
+
+    <script src="js/feriados.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#enviar").click(function () {
+
+                $.get("https://apis.digital.gob.cl/fl/feriados/2021",
+                    function (data) {
+
+                        $.each(data, function (i, item) {
+                            $("#fechas").append("<tr><td>" + item.nombre + "</td><td>" + item.fecha +
+                                "</td><td>" + item.tipo + "</td><td>" + item.irrenunnciable + "</td></tr>");
+
+
+                        });
+
+                    });
+            });
+        })
+    </script>
+    <style>
+        #caja {
+            margin-left: 40px;
+        }
+    </style>
 
 
 </head>
@@ -136,14 +159,46 @@
         </div>
     </section>
 
+    <h1>Consumo de API de Feriados </h1>
+    <hr>
+    <div id="caja">
+        <h3>Último feriado de la API</h3>
+            <p id="feriado"></p>
+            <br>
+        <h3>Primer feriado de la API</h3>
+            <p id="feriado2"></p>
+        
+        <br><br>
+    
+   
+        <button type="button" id="enviar">Cargando datos</button>
+    </div>
+    <br><br>
+
+    <table class="table" id="fechas">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Irrenunciable</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+
     <footer class="mt-5">
         <h5>Nicol Arancibia - Leandro Cabello - Rodrigo Ponce / @Copyright Derechos reservados.</h5>
-        <i class="fab fa-facebook fa-2x mx-2 mt-3"></i> <i class="fab fa-instagram fa-2x mx-2 mt-3"></i> <i class="fab fa-twitter-square fa-2x mx-2 mt-3"></i> 
-      </footer>
-  
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <i class="fab fa-facebook fa-2x mx-2 mt-3"></i> <i class="fab fa-instagram fa-2x mx-2 mt-3"></i> <i
+            class="fab fa-twitter-square fa-2x mx-2 mt-3"></i>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 </body>
 
