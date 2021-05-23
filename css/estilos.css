@@ -11,21 +11,21 @@ body {
 div {
     color:oscuro(This);
     background-color: oscuro(This);
-  }
-
-.color{
-    color: white;
 }
 
-.footer {
+.color{
+  color: white;
+}
+
+footer {
   align-self: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    background-color:  #006699;
-    color: azure;
-    width: 100%;
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
 }
 
 #galeria img{
@@ -43,17 +43,30 @@ div {
   height: 23%;
 }
 
-.navbar{
-    position: fixed;
-    background-color:oscuro(This);
-    border-color: oscuro(This);
+#navv li a{
+  color:#008CBA;
 }
 
+#api {
+  border: 40px;
+  padding: 35px;
+  background-color: whitesmoke;
+}
+
+#texto2index {
+  background-color: aliceblue;
+  border-radius: 15px;
+}
 
 .container {
     position: relative;
     width: 50%;
-  }
+}
+
+.container2 {
+  padding-left: 15%;
+  padding-right: 15%;
+}
   
 .image {
   display: block;
@@ -94,10 +107,12 @@ div {
 
 .iframe-container{
   position: relative;
-  width: 100%;
+  width: 50%;
   padding-bottom: 56.25%; 
-  height: 0;
+  display: block;
+  margin: 0 auto;
 }
+
 .iframe-container iframe{
   position: absolute;
   top:0;
@@ -110,7 +125,6 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background: linear-gradient(135deg, #71b7e6, #9b59b6); -- Ver si aplicar. Sólo aparece el borde en el segundo formulario */
   padding: 25px 30px;
   border-radius: 5px;
   border: 5px;

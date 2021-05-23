@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Necesistas o regalas?</title>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>¿Necesistas o regalas?</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
@@ -147,7 +145,8 @@
 
                         <div onmouseover="Mover(this)" onmouseout="MoverFuera(this)"
                             style="background-color: red; width: 200px; height: 30px; padding: 25px;">
-                            ¡Hola!</div>
+                            ¡Hola!
+                        </div>
 
                         <div class="button">
                             <input type="submit" value="Ingresar producto"><br>
@@ -159,38 +158,39 @@
         </div>
     </section>
 
-    <h1>Consumo de API de Feriados </h1>
-    <hr>
-    <div id="caja">
-        <h3>Último feriado de la API</h3>
-            <p id="feriado"></p>
-            <br>
-        <h3>Primer feriado de la API</h3>
-            <p id="feriado2"></p>
+    <section id=api>
+        <h2 class="text-warning">Feriados en Chile</h2>
+        <hr>
+        <div id="caja">
+            <h3 class="text-warning">Último feriado</h3>
+                <p id="feriado"></p>
+                <br>
+            <h3 class="text-warning">Primer feriado</h3>
+                <p id="feriado2"></p>          
+            <br><br>
         
-        <br><br>
     
-   
-        <button type="button" id="enviar">Cargando datos</button>
-    </div>
-    <br><br>
+            <button type="button" id="enviar">Mostrar datos</button>
+        </div>
+        <br><br>
 
-    <table class="table" id="fechas">
-        <thead>
-            <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Tipo</th>
-                <th scope="col">Irrenunciable</th>
-            </tr>
-        </thead>
-        <tbody>
+        <table class="table" id="fechas">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Irrenunciable</th>
+                </tr>
+            </thead>
+            <tbody>
 
-        </tbody>
+            </tbody>
 
-    </table>
+        </table>
+    </section>
 
-    <footer class="mt-5">
+    <footer class="mt-4">
         <h5>Nicol Arancibia - Leandro Cabello - Rodrigo Ponce / @Copyright Derechos reservados.</h5>
         <i class="fab fa-facebook fa-2x mx-2 mt-3"></i> <i class="fab fa-instagram fa-2x mx-2 mt-3"></i> <i
             class="fab fa-twitter-square fa-2x mx-2 mt-3"></i>
